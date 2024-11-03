@@ -3,14 +3,16 @@ package com.example.teamWork4.model;
 import jakarta.persistence.*;
 
 @Entity
-    public class Post {
-        @Id
-        @GeneratedValue(strategy = GenerationType.IDENTITY)
-        private Long id;
+@Table(name = "sw_post")
 
-        private String text;
+public class Post {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-        @ManyToOne
-        @JoinColumn(name = "user_id")
-        private User createdBy;
+    private String text;
+
+    @ManyToOne
+    @JoinColumn(name = "id")
+    private User createdBy;
 }

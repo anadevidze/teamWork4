@@ -1,4 +1,4 @@
-package com.example.teamWork4.Repository;
+package com.example.teamWork4.repository;
 
 import com.example.teamWork4.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
