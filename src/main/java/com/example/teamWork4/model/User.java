@@ -2,15 +2,18 @@ package com.example.teamWork4.model;
 
 import jakarta.persistence.*;
 
-@Entity
-    public class User {
-        @Id
-        @GeneratedValue(strategy = GenerationType.IDENTITY)
-        private Long id;
+import java.util.Date;
 
-        private String firstName;
-        private String lastName;
-        @Column(unique = true)
-        private String username;
-        private String dateOfBirth;
+@Entity
+@Table(name = "sw_user")
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String firstName;
+    private String lastName;
+    @Column(unique = true)
+    private String username;
+    private Date dateOfBirth;
 }

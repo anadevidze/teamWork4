@@ -3,6 +3,7 @@ package com.example.teamWork4.model;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name="sw_comment")
 public class Comment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -11,10 +12,10 @@ public class Comment {
     private String text;
 
     @ManyToOne
-    @JoinColumn(name = "post_id")
+    @JoinColumn(name = "id")
     private Post post;
 
     @ManyToOne
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "id")
     private User createdBy;
 }
